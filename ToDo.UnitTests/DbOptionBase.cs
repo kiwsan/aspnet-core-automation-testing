@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using Common.Data.Entities;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +11,10 @@ namespace ToDo.UnitTests
 {
     public abstract class DbOptionBase
     {
+        protected readonly ItemTodo _firstItem = new ItemTodo() { Id = Guid.Parse("965468a8-9c0e-4ebd-9538-4987eb0c995d"), Name = "First Item" };
+        protected readonly ItemTodo _secondItem = new ItemTodo() { Id = Guid.Parse("217303d1-26ae-4a1a-aaca-7b920a7cbaaa"), Name = "Second Item" };
+        protected ItemTodo[] _items;
+
         private const string InMemoryConnectionString = "DataSource=:memory:";
         private const string InMemoryDatabaseConnectionString = "InMemoryDb";
 

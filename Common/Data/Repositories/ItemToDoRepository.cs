@@ -1,5 +1,4 @@
-﻿using Common.Data;
-using Common.Data.Entities;
+﻿using Common.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,10 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Application.Services
+namespace Common.Data.Repositories
 {
-
-    public interface IItemToDoSqliteInMemoryService
+    public interface IItemToDoRepository
     {
         Task<ItemTodo> GetAsync(Guid id);
         Task<IEnumerable<ItemTodo>> BrowsAsync();
@@ -19,10 +17,10 @@ namespace Common.Application.Services
         Task DeleteAsync(Guid id);
     }
 
-    public class ItemToDoSqliteInMemoryService : IItemToDoSqliteInMemoryService
+    public class ItemToDoRepository : IItemToDoRepository
     {
         private readonly AppDbContext _dbContext;
-        public ItemToDoSqliteInMemoryService(AppDbContext dbContext)
+        public ItemToDoRepository(AppDbContext dbContext)
         {
             this._dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
@@ -52,6 +50,5 @@ namespace Common.Application.Services
             entity.Name = item.Name;
             await _dbContext.SaveChangesAsync();
         }
-
     }
 }

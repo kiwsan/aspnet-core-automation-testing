@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace ToDo.UnitTests.Services
 {
     [TestFixture]
-    public class ItemToDoSqliteInMemoryService_Tests : DbOptionBase
+    public class ItemToDoEfInMemoryService_Tests : DbOptionBase
     {
         private AppDbContext _dbContext;
         private IItemToDoInMemoryService _itemToDoService;
@@ -23,7 +23,7 @@ namespace ToDo.UnitTests.Services
         public void Init()
         {
             //arrange
-            _dbContext = new AppDbContext(InMemoryWithSqlite());
+            _dbContext = new AppDbContext(InMemoryWithEfDatabase());
             _dbContext.Database.EnsureCreated();
 
             var repository = new Mock<ItemToDoRepository>(_dbContext);
@@ -74,19 +74,7 @@ namespace ToDo.UnitTests.Services
             Assert.That(actualItems.Any(x => x.Id == thirdItem.Id));
             Assert.AreEqual(3, actualItems.Count());
         }
-
-        [Test]
-        public void ShouldHaveNotPassWhenAddAsyncNullItemReturnThrowException()
-        {
-            //arrange
-            var thirdItem = new ItemTodo();
-
-            //actual
-
-            //assert
-            Assert.ThrowsAsync<DbUpdateException>(async () => await _itemToDoService.AddAsync(thirdItem));
-        }
-
+        
         [TestCase("testname")]
         [TestCase("TESTNAME")]
         [TestCase("Ein.Test")]
@@ -106,19 +94,7 @@ namespace ToDo.UnitTests.Services
             //assert
             Assert.AreEqual(expectedName, actualItem.Name);
         }
-
-        [Test]
-        public async Task ShouldHaveNotPassWhenUpdateAsyncNullItemReturnThrowException()
-        {
-            //actual
-            var actualItem = await _itemToDoService.GetAsync(_firstItem.Id);
-
-            actualItem.Name = null;
-
-            //assert
-            Assert.ThrowsAsync<DbUpdateException>(async () => await _itemToDoService.UpdateAsync(actualItem));
-        }
-
+        
         [Test]
         public async Task ShouldHavePassWhenDeleteAsyncItem()
         {
