@@ -1,7 +1,9 @@
-language: csharp
-dist: trusty
-mono: none
+dist: xenial 
+sudo: required 
+language: csharp 
+mono: none 
 dotnet: 2.2.203 
+solution: ToDo.sln 
 
 install:
 - dotnet restore
