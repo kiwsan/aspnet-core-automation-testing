@@ -49,33 +49,6 @@ namespace ToDo.UnitTests.Services
         }
 
         [Test]
-        public async Task ShouldHavePassWhenBrowsAsyncReturnCurrectItem()
-        {
-            //actual
-            var actualItems = await _itemToDoService.BrowsAsync();
-
-            //assert
-            Assert.That(actualItems.Any(x => x.Id == _firstItem.Id));
-            Assert.That(actualItems.Any(x => x.Id == _secondItem.Id));
-            Assert.AreEqual(_items.Count(), actualItems.Count());
-        }
-
-        [Test]
-        public async Task ShouldHavePassWhenAddAsyncItem()
-        {
-            //arrange
-            var thirdItem = new ItemTodo() { Id = Guid.Parse("74a1eedc-0719-408c-8c07-1bee8c2dd0b1"), Name = "Third Item" };
-            await _itemToDoService.AddAsync(thirdItem);
-
-            //actual
-            var actualItems = await _itemToDoService.BrowsAsync();
-
-            //assert
-            Assert.That(actualItems.Any(x => x.Id == thirdItem.Id));
-            Assert.AreEqual(3, actualItems.Count());
-        }
-
-        [Test]
         public void ShouldHaveNotPassWhenAddAsyncNullItemReturnThrowException()
         {
             //arrange
