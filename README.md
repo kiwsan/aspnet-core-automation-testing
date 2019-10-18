@@ -1,4 +1,4 @@
-# Best Solutions Automation Testing for .NET
+# Solutions Automation Testing for .NET
 
 Work in progress.
 
