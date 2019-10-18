@@ -23,4 +23,4 @@ script:
 - dotnet build
 - dotnet test ToDo.UnitTests/ToDo.UnitTests.csproj
 - dotnet test ToDo.IntegrationTests/ToDo.IntegrationTests.csproj
-- docker-compose -f ToDo.Api/docker-compose.yml build
+
