@@ -15,6 +15,7 @@ In engineering and its various subdisciplines, [Acceptance testing](https://en.w
 - https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
 - https://raaaimund.github.io/tech/2019/05/07/aspnet-core-unit-testing-moq/
 - https://raaaimund.github.io/tech/2019/05/08/aspnet-core-integration-testing/
+- https://medium.com/@briananderson2209/best-automation-testing-tools-for-2018-top-10-reviews-8a4a19f664d2
 
 ## Third party
 - https://anglesharp.github.io/
