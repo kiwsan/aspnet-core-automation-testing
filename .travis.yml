@@ -5,17 +5,6 @@ mono: none
 dotnet: 2.2.203 
 solution: ToDo.sln
 
-services:
-- docker
-
-env:
-  COMPOSE_VERSION: 1.4.1
-
-before_install:
- - curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
- - chmod +x docker-compose
-- sudo mv docker-compose /usr/local/bin
-
 install:
 - dotnet restore
 
@@ -23,5 +12,4 @@ script:
 - dotnet build
 - dotnet test ToDo.UnitTests/ToDo.UnitTests.csproj
 - dotnet test ToDo.IntegrationTests/ToDo.IntegrationTests.csproj
-- docker-compose -f ToDo.Api/docker-compose.yml build
 
