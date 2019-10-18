@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToDo.UnitTests
+namespace Common.Data
 {
     public abstract class DbOptionBase
     {

@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Mvc", "ToDo.Mvc\ToDo.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Api", "ToDo.Api\ToDo.Api.csproj", "{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.IntegrationTests", "ToDo.IntegrationTests\ToDo.IntegrationTests.csproj", "{E115B513-CAD4-42E6-ABEB-A1549C038D52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.AcceptanceTests", "ToDo.AcceptanceTests\ToDo.AcceptanceTests.csproj", "{108AABE0-78E7-42D1-B99E-A8BC0FC70B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E115B513-CAD4-42E6-ABEB-A1549C038D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E115B513-CAD4-42E6-ABEB-A1549C038D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E115B513-CAD4-42E6-ABEB-A1549C038D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E115B513-CAD4-42E6-ABEB-A1549C038D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108AABE0-78E7-42D1-B99E-A8BC0FC70B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108AABE0-78E7-42D1-B99E-A8BC0FC70B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108AABE0-78E7-42D1-B99E-A8BC0FC70B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108AABE0-78E7-42D1-B99E-A8BC0FC70B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
