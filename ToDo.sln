@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.RazorPages", "ToDo.Raz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Mvc", "ToDo.Mvc\ToDo.Mvc.csproj", "{94C8F83B-A5D5-45CB-8DD6-E7A79BBA1EA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Api", "ToDo.Api\ToDo.Api.csproj", "{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{94C8F83B-A5D5-45CB-8DD6-E7A79BBA1EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94C8F83B-A5D5-45CB-8DD6-E7A79BBA1EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94C8F83B-A5D5-45CB-8DD6-E7A79BBA1EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650B7D45-41AE-4E93-92B3-D8D56F6DE9AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

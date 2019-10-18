@@ -76,5 +76,29 @@ namespace ToDo.UnitTests.Controllers
             Assert.IsInstanceOf<SerializableError>(badRequest.Value);
         }
 
+        [Test]
+        public async Task ShouldHavePassWhenModelStateIsValidAndReturnsARedirectAsync()
+        {
+            //arrange
+            _itemToDoRepository.Setup(repo => repo.BrowsAsync())
+                .ReturnsAsync(_items);
+
+            var controller = new HomeController(_itemToDoRepository.Object);
+
+            var command = new ItemToDoModel {
+                Name = "Hello world!"
+            };
+
+            //actual
+            var result = await controller.Index(command);
+
+            //assert
+            Assert.IsInstanceOf<RedirectToActionResult>(result);
+
+            var action = result as RedirectToActionResult;
+
+            Assert.AreEqual("Index", action.ActionName);
+        }
+
     }
 }

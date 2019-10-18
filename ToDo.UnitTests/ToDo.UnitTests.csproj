@@ -16,12 +16,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\ToDo.Api\ToDo.Api.csproj" />
     <ProjectReference Include="..\ToDo.Mvc\ToDo.Mvc.csproj" />
     <ProjectReference Include="..\ToDo.RazorPages\ToDo.RazorPages.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ApiControllers\" />
   </ItemGroup>
 
 </Project>
