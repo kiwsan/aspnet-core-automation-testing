@@ -5,6 +5,12 @@ mono: none
 dotnet: 2.2.203 
 solution: ToDo.sln
 
+env:
+  global:
+    # COVERITY_SCAN_TOKEN
+    # ** specific to your project **
+    - secure: "xxxx"
+    
 install:
 - dotnet restore
 
@@ -25,3 +31,22 @@ addons:
     organization: "kiwsan"
     token:
       secure: "b9853b67789447e93b2f16ba9400e6311f5cec2d" # encrypted value of your token
+  coverity_scan:
+    # GitHub project metadata
+    # ** specific to your project **
+    project:
+      name: github.com/kiwsan/aspnet-core-automation-testing
+      version: 1.0
+      description: Software automation testing guide and tools.
+    # Where email notification of build analysis results will be sent
+    notification_email: kiwsanthia@gmail.com
+    # Commands to prepare for build_command
+    # ** likely specific to your build **
+    build_command_prepend: dotnet build
+    # The command that will be added as an argument to "cov-build" to compile your project for analysis,
+    # ** likely specific to your build **
+    build_command: dotnet build
+    # Pattern to match selecting branches that will run analysis. We recommend leaving this set to 'coverity_scan'.
+    # Take care in resource usage, and consider the build frequency allowances per
+    #   https://scan.coverity.com/faq#frequency
+    branch_pattern: master
