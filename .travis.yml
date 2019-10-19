@@ -40,5 +40,5 @@ addons:
       description: "Software automation testing guide and tools."
     notification_email: kiwsanthia@gmail.com
     build_command_prepend: "dotnet clean"
-    build_command: "dotnet build"
+    build_command: "dotnet test ToDo.IntegrationTests/ToDo.IntegrationTests.csproj"
     branch_pattern: master
