@@ -9,7 +9,7 @@ env:
   global:
     # COVERITY_SCAN_TOKEN
     # ** specific to your project **
-    - secure: "xxxx"
+    - secure: "pVLNJQLzrpQJqU3bszjQyu8Tx1316V9Ez"
     
 install:
 - dotnet restore
