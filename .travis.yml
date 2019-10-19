@@ -42,11 +42,11 @@ addons:
     notification_email: kiwsanthia@gmail.com
     # Commands to prepare for build_command
     # ** likely specific to your build **
-    build_command_prepend: dotnet build
+    build_command_prepend: dotnet clean
     # The command that will be added as an argument to "cov-build" to compile your project for analysis,
     # ** likely specific to your build **
     build_command: dotnet build
     # Pattern to match selecting branches that will run analysis. We recommend leaving this set to 'coverity_scan'.
     # Take care in resource usage, and consider the build frequency allowances per
     #   https://scan.coverity.com/faq#frequency
-    branch_pattern: master
+    branch_pattern: coverity_scan
