@@ -5,15 +5,6 @@ mono: none
 dotnet: 2.2.203 
 solution: ToDo.sln
 
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "U/llVQ7vWkvaAuF9tfLuozr01pgGEciW/AXUSVpoI4HppRGL02Z069Ct4IoaSjJwT5OGo1w0JjV0yMO+DMW3TUxSgym+Vox2brlRkWTMEr5M5pZHQmucfiwN4O3f8ij+SXz2ykJgJYMPV9I5xko3Iudt5SKlibMc73Xtl6kiyP0oSlx8plX6WJl9RuxHGq1xwwSyPxZ2xgC4SvJRauuItfMP37iNNFyLY96I6YG1pEDM3U+yqWmtJ3TyboZTi97jmDDReWc9cctrcFKo0a2xzldfP2dMBQXnw7Ygv4CetIl/l5gLHzeFek+N4uTKW2DLlqABbEktL4ny2ZzrSL/f7YvNwrF0xk3R8umlHPEGMUGJKQ2t1dwHNvR8oF/gU5tajKbVuNlanWHG4f/NhU2/GjaSbr/riqT7u5Yr/8sFxTDSAhsGVWgVWEf6ibF7Tq+G28qVtebOTXHtA7R51BaVPiEg/YEJwQkfgHBr1W4pHP235M+NmB3DCcqzEYCtWuOmQPqoq3Ci4Fbff/6w6jl/j/8s3cVCuxKeVN2MmkiWIZ2eMwcwPGxEtyi0myjuuNNCkjyuni17j2iLq5NeTlI0xhzxHUUETQ4IvIJ+5uRESQhOXIvaMwB/x3Zp6YPWk++La5A97adr2wBRNKX6mNSrrY2LPGhtiL6nuHvu/li/hps="
-
-before_install:
-  - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
-
 install:
 - dotnet restore
 
@@ -34,11 +25,3 @@ addons:
     organization: "kiwsan"
     token:
       secure: "b9853b67789447e93b2f16ba9400e6311f5cec2d" # encrypted value of your token
-  coverity_scan:
-    project:
-      name: "kiwsan/aspnet-core-automation-testing"
-      description: "Software automation testing guide and tools."
-    notification_email: kiwsanthia@gmail.com
-    build_command_prepend: "dotnet clean"
-    build_command: "dotnet test ToDo.IntegrationTests/ToDo.IntegrationTests.csproj"
-    branch_pattern: master
