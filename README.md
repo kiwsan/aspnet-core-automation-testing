@@ -4,11 +4,6 @@ Work in progress.
 
 [![Build Status](https://travis-ci.org/kiwsan/aspnet-core-automation-testing.svg?branch=master)](https://travis-ci.org/kiwsan/aspnet-core-automation-testing)
 
-<a href="https://scan.coverity.com/projects/kiwsan-aspnet-core-automation-testing">
-  <img alt="Coverity Scan Build Status"
-       src="https://scan.coverity.com/projects/19454/badge.svg"/>
-</a>
-
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=kiwsan_aspnet-core-automation-testing)](https://sonarcloud.io/dashboard?id=kiwsan_aspnet-core-automation-testing)
 
 ## Unit Test
