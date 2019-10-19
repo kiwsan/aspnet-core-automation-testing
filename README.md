@@ -4,6 +4,13 @@ Work in progress.
 
 [![Build Status](https://travis-ci.org/kiwsan/aspnet-core-automation-testing.svg?branch=master)](https://travis-ci.org/kiwsan/aspnet-core-automation-testing)
 
+<a href="https://scan.coverity.com/projects/kiwsan-aspnet-core-automation-testing">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/19454/badge.svg"/>
+</a>
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=kiwsan_aspnet-core-automation-testing)](https://sonarcloud.io/dashboard?id=kiwsan_aspnet-core-automation-testing)
+
 ## Unit Test
 In computer programming, [Unit testing](https://en.wikipedia.org/wiki/Unit_testing) is a software testing method by which individual units of source code, sets of one or more computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine whether they are fit for use.
 
