@@ -24,4 +24,4 @@ addons:
   sonarcloud:
     organization: "kiwsan"
     token:
-      secure: "b9853b67789447e93b2f16ba9400e6311f5cec2d" # encrypted value of your token
+      secure: "${SONAR_CLOUD_TOKEN}" # encrypted value of your token
